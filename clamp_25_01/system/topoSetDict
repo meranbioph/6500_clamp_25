@@ -1,0 +1,392 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+// CLAMP_ZONE
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  new;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_0;
+        };
+    }
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_1;
+        };
+    }
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_2;
+        };
+    }
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_3;
+        };
+    }
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_4;
+        };
+    }
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_5;
+        };
+    }
+    {
+        name    clamp_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name clamp_6;
+        };
+    }
+    {
+      name    clamp_zone;
+      type    cellZoneSet;
+      action  new;
+      source  setToCellZone;
+      sourceInfo
+      {
+        set    clamp_set;
+      }
+    }
+
+// COVER_ZONE
+
+    {
+        name    cover_set;
+        type    cellSet;
+        action  new;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name cover_27;
+        };
+    }
+    {
+        name    cover_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name cover_28;
+        };
+    }
+    {
+        name    cover_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name cover_29;
+        };
+    }
+    {
+        name    cover_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name cover_30;
+        };
+    }
+    {
+        name    cover_set;
+        type    cellSet;
+        action  add;
+        source  zoneToCell;
+        sourceInfo
+        {
+          name cover_31;
+        };
+    }
+    {
+      name    cover_zone;
+      type    cellZoneSet;
+      action  new;
+      source  setToCellZone;
+      sourceInfo
+      {
+        set    cover_set;
+      }
+    }
+
+// INNER_ZONE
+
+{
+    name    inner_set;
+    type    cellSet;
+    action  new;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_18;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_19;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_20;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_21;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_22;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_23;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_24;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_25;
+    };
+}
+{
+    name    inner_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name inner_domain_26;
+    };
+}
+{
+  name    inner_zone;
+  type    cellZoneSet;
+  action  new;
+  source  setToCellZone;
+  sourceInfo
+  {
+    set    inner_set;
+  }
+}
+
+// OUTER_ZONE
+
+{
+    name    outer_set;
+    type    cellSet;
+    action  new;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_7;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_8;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_9;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_10;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_11;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_12;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_13;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_14;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_15;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_16;
+    };
+}
+{
+    name    outer_set;
+    type    cellSet;
+    action  add;
+    source  zoneToCell;
+    sourceInfo
+    {
+      name outer_domain_17;
+    };
+}
+{
+  name    outer_zone;
+  type    cellZoneSet;
+  action  new;
+  source  setToCellZone;
+  sourceInfo
+  {
+    set    outer_set;
+  }
+}
+);
+
+// ************************************************************************* //
